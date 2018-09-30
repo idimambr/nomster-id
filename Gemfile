@@ -62,4 +62,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
 
+# Simple Form gem
 gem 'simple_form'
+
+# gem for plus icon
+gem "font-awesome-rails"
