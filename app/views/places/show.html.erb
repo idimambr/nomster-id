@@ -4,12 +4,8 @@
 <br/><br/>
 <p><%= @place.description %></p>
 
-
-  </head>
-  <body>
-  <div id="map"></div>
+<% if @place.latitude.present? && @place.longitude.present? %>
   <script>
-    <% if @place.latitude.present? && @place.longitude.present? %>
     function initMap() {
       var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
 
@@ -27,11 +23,12 @@
   </script>
 
   <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4NCPftWsdmLhoCaOgnQ9yLcTFwHqdMBQ&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOU535OZqezCzRNWdJBpj_gXYJb0GpgMY&&callback=initMap">
   </script>
+<% end %>
 
   <div id="map"></div>
-<% end %>
+
 
 <br />
 
